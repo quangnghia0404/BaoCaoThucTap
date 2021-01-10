@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <title>Quản lí Admin | Quản lý tours</title>
+    </head>
+    <body>
+    	 <div class="login" align="right" >
+            <h4>Xin chào Admin:  </h4>
+            <a href="?login=dangxuat" style="color: black;"> <button class="btn btn-primary">Đăng xuất</button></a>
+        </div> 
+        <marquee><h2>Chào mừng bạn đến với trang quản trị của ADMIN</h2></marquee>
+         
+    <div class="container" style="background-color: #EEEEEE;">
+            <div class="container-fluid" style="background-color: #00FFFF;">
+                <ul class="nav navbar-nav bg-dark">
+                    <li class="active"><a href="dasboard.html">Trang chủ</a></li>
+                    <li><a href="#">Đơn hàng</a></li>
+                    <li><a href="danhmuctour.html">Danh mục tour</a></li>
+                    <li><a href="tour.html">Tour</a></li> 
+                    <li><a href="#">Khách hàng</a></li>
+                    <li><a href="phuongtien.html">Phương tiện</a></li> 
+                </ul>
+            </div>
+            <div class="main-body">
+                <nav aria-label="breadcrumb" class="main-breadcrumb">
+                        <ol class="breadcrumb">
+                            <hr>
+                        <li class="breadcrumb-item"><a href="dasboard.html">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="tour.html">Tours</a></li>
+                        </ol>
+                </nav>
+            </div>
+            <h3 style="text-align: center;">QUẢN LÝ TOURS DU LỊCH</h3>
+            <hr>
+			<a href="xulydanhmucbaiviet.php" style="color: black;"> <button class="btn btn-danger">Thêm mới</button></a>
+			<hr>
+                <div class="row">
+             
+				<div class="col-md-4">
+				
+				<h4>Thêm tour</h4>
+				
+				<form action="" method="POST" enctype="multipart/form-data">
+					<label>Tên tour:</label>
+					<input type="text" class="form-control" name="tentour" placeholder="Tên sản phẩm"><br>
+					<label>Hình ảnh:</label>
+					<input type="file" class="form-control" name="hinhanh"><br>
+					<label>Giá người lớn:</label>
+					<input type="text" class="form-control" name="gianguoilon" placeholder="Giá người lớn"><br>
+					<label>Giá trẻ em:</label>
+					<input type="text" class="form-control" name="giatreem" placeholder="Giá trẻ em"><br>
+					<label>Số lượng người tối đa:</label>
+                    <input type="text" class="form-control" name="songuoi" placeholder="Số lượng người"><br>
+                    <label>Tên khách sạn:</label>
+                    <input type="text" class="form-control" name="tenkhachsan" placeholder="Tên khách sạn"><br>
+					<label>Phương tiện:</label>
+					
+					<select name="phuongtien" class="form-control">
+						<option value="0">-----Chọn phương tiện-----</option>
+						
+						<option value="">Máy bay</option>
+						<option value="">Xe du lịch </option>
+					</select><br>
+                    <label>Ngày bắt đầu:</label>
+                    <input type="date" class="form-control" name="ngaybd" placeholder="Ngày băt đầu"><br>
+                    <label>Ngày kết thúc:</label>
+					<input type="date" class="form-control" name="ngaykt" placeholder="Ngày kết thúc"><br>
+					<label>Chi tiết tour:</label>
+					<textarea class="form-control" name="noidung"></textarea><br>
+					<label>Danh mục tour:</label>
+					
+					<select name="danhmuc" class="form-control">
+						<option value="0">-----Chọn danh mục-----</option>
+						
+						<option value="">Tour trong nước</option>
+						<option value="">Tour ngoài nước</option>
+					</select><br>
+					<input type="submit" name="themsanpham" value="Thêm tour" class="btn btn-default">
+				</form>
+				</div>
+				
+			<div class="col-md-8">
+				<h4>Liệt kê sản phẩm</h4>
+				
+				<table class="table table-bordered ">
+					<tr>
+						<th>Thứ tự</th>
+						<th>Tên tour</th>
+						<th>Hình ảnh</th>
+						<th>Số lượng người</th>
+						<th>Danh mục</th>
+                        <th>Giá người lớn</th>
+                        <th>Giá trẻ em</th>
+						<th>Quản lý</th>
+					</tr>
+					
+					<tr>
+						<td>1</td>
+						<td>TPHCM/Hà Nội – Mỹ 6N5Đ: New York, Philadelphia, Washington D.C</td>
+						<td><img src="../images/tour/a.jpg" height="100" width="140"></td>
+						<td>20</td>
+						<td>Tour ngoài nước</td>
+						<td>41500000</td>
+						<td>38000000</td>
+						<td><a href="#">Xóa</a> || <a href="#">Cập nhật</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>TPHCM/Hà Nội – Mỹ 6N5Đ: New York, Philadelphia, Washington D.C</td>
+						<td><img src="../images/tour/a.jpg" height="100" width="140"></td>
+						<td>20</td>
+						<td>Tour ngoài nước</td>
+						<td>41500000</td>
+						<td>38000000</td>
+						<td><a href="#">Xóa</a> || <a href="#">Cập nhật</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>TPHCM/Hà Nội – Mỹ 6N5Đ: New York, Philadelphia, Washington D.C</td>
+						<td><img src="../images/tour/a.jpg" height="100" width="140"></td>
+						<td>20</td>
+						<td>Tour trong nước</td>
+						<td>41500000</td>
+						<td>38000000</td>
+						<td><a href="#">Xóa</a> || <a href="#">Cập nhật</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>TPHCM/Hà Nội – Mỹ 6N5Đ: New York, Philadelphia, Washington D.C</td>
+						<td><img src="../images/tour/a.jpg" height="100" width="140"></td>
+						<td>20</td>
+						<td>Tour trong nước</td>
+						<td>41500000</td>
+						<td>38000000</td>
+						<td><a href="#">Xóa</a> || <a href="#">Cập nhật</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>TPHCM/Hà Nội – Mỹ 6N5Đ: New York, Philadelphia, Washington D.C</td>
+						<td><img src="../images/tour/a.jpg" height="100" width="140"></td>
+						<td>20</td>
+						<td>Tour ngoài nước</td>
+						<td>41500000</td>
+						<td>38000000</td>
+						<td><a href="#">Xóa</a> || <a href="#">Cập nhật</a></td>
+					</tr>
+				
+				</table>
+			</div>
+                </div>
+            <hr>
+             <div class="container-fluid" style="background-color: #00FFFF;">
+                <p class="h4" style="text-align: center;">&copy All right Reversed.<a class="text-green ml-2" href="#" target="_blank">QuangNghĩa!@.com</a></p>
+            </div>
+    </body>
+        </div>
+    </body>
+    </html>
